@@ -38,37 +38,27 @@
 
 [Click here to Invite me](https://discord.com/api/oauth2/authorize?client_id=721100913611112470&permissions=1644972474359&scope=bot%20applications.commands)
 
-### Why you should invite Tamako
-Tamako is the only bot you will ever need
-From custom Welcome & Goodbye message to server stats to XP system and much more.
+### ¿Por qué deberías invitar a Anya?
+Anya es el unico bot que necesitara tu servidor.
+Ya que tienes desde moderacion del canal hasta juegos y mucho mas.
 
-With Tamako, 
-- You can easily moderate your server with the help of Tamako She has got you covered
-- Tamako has a Ticket Support System to help your server members directly talk with support team on your server. She can even archive those tickets and give you a copy
-- Tamako can play Music and even different sounds from the SoundBoard
-- Tamako has multiple shards to reduce the response time and provide you with the output as soon as possible.
+Con Anya, 
+- Puede moderar fácilmente su servidor con la ayuda de Anya Ella lo tiene cubierto
+- Anya puede reproducir música.
 
 
-Check the docs at <a href="https://tamako.tech/">Tamako Tech</a>
+/*Check the docs at <a href="https://tamako.tech/">Tamako Tech</a>
 
 Tamako is now open source and this is a rewrite of Code of Tamako and This repository will NOT INCLUDE all the features 
 that are present in Tamako Bot.
 
-## MacOS Setup
-- If `npm install` does not work use `brew install pkg-config cairo pango libpng jpeg giflib librsvg` first
 
 ## Contribution
-Create a fork, make changes there and make a pull requrest.
-If you love this work and wish to contribute in another manner, please do join our support server (which isn't much) and ping/mention Bear#3437 there.
+Si le encanta este trabajo y desea contribuir de otra manera, únase a nuestro servidor de soporte (que no es mucho) y haga ping/mencione a JuanD#4698 allí.
 
 ## Honourable Mentions
-- Sakurajimai#6742 [maisans-maid](https://github.com/maisans-maid)<br/>
-  Checkout [Mai Bot](https://github.com/maisans-maid/Mai)
-- [RileCraft](https://github.com/RileCraft/DiscordBot-Template/)<br/>
-  Heavily modified structure from his [Repo](https://github.com/RileCraft/DiscordBot-Template/)
-- Axel [kakarot-dev](https://github.com/kakarot-dev)<br/>
-  For Helping me with debugging
+- Nadie
 
 
 ## Disclaimer
-Tamako's developer is not, in any way, affiliated with Tamako Kitashirakawa's creator, nor the production team that brought the anime together, and is not, in any way, benefit financially from the sales the series produces.
+El desarrollador de Anya no está afiliado, de ninguna manera, con el creador de Spy x family, ni con el equipo de producción que reunió el anime y, de ninguna manera, se beneficia financieramente de las ventas que produce la serie.
