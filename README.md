@@ -3,9 +3,6 @@
 ## License
 <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> along with Common Clause
 
-Read the full license <a href="https://github.com/Tamako-Tech/Tamako/blob/main/LICENSE.md">here</a>
-
-Rewrite for Tamako that will be written on the freshly released of djs is just around the corner
 
 ---
 
@@ -20,7 +17,7 @@ Rewrite for Tamako that will be written on the freshly released of djs is just a
 </p>
 
 <p align="center">
-  <a href="https://github.com/BearTS/Tamako">
+  <a href="https://github.com/Ghost-ofc/Anya-Bot">
     <img src="https://img.shields.io/github/package-json/v/BearTS/tamako/main?color=pink&label=Current%20Version" alt="App Version" />
   </a>
   <a href="https://nodejs.org/dist/latest-v16.x/">
