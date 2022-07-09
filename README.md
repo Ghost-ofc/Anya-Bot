@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/github/package-json/v/BearTS/tamako/main?color=pink&label=Current%20Version" alt="App Version" />
   </a>
   <a href="https://nodejs.org/dist/latest-v16.x/">
-    <img src="https://img.shields.io/node/v/package" alt="Node Requirements">
+    <img src="https://img.shields.io/static/v1?label=node&message=%3E=16.0.0&color=success&logo=Node.js&logoColor=white" alt="Node Requirements">
   </a>
   <!-- <a href="https://github.com/Ghost-ofc/Anya-Bot">
     <img src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2022/06/Soy-x-family-anya-hija-biologica.jpg?resize=1280%2C720&quality=80&ssl=1" alt="build">
