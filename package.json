@@ -1,0 +1,29 @@
+{
+  "name": "discord-bot-main",
+  "version": "1.0.0",
+  "description": "Como este vendria a ser mi primer proyecto, espero este bien y sea de ayuda a alguien.",
+  "main": "index.js",
+  "dependencies": {
+    "@discordjs/opus": "^0.8.0",
+    "@distube/soundcloud": "^1.1.0",
+    "@distube/spotify": "^1.2.1",
+    "colors": "^1.4.0",
+    "discord-gamecord": "^2.0.0",
+    "discord-giveaways": "^5.2.2",
+    "discord.js": "^13.8.1",
+    "distube": "^3.3.4",
+    "dotenv": "^16.0.1",
+    "enmap": "^5.9.0",
+    "ffmpeg-static": "^4.4.1",
+    "mathjs": "^10.6.4",
+    "mongoose": "^6.4.4",
+    "nodemon": "^2.0.7",
+    "weather-js": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
