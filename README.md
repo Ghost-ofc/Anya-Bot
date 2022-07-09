@@ -6,7 +6,7 @@
 
 ---
 
-<h1 align="center"> <img src='https://i.pinimg.com/564x/27/a7/25/27a725cb4ce7c884e704ca57b4eb7ca4.png' width='60' height='60'>Anya</h1>
+<h1 align="center"> <img src='https://blogger.googleusercontent.com/img/a/AVvXsEgi1S4B9xqc82m4HoZ2qyCLyH6QA1hB7aWrK92fMOHhknvwatevP76BDc_FiqduXlSNQUoIQQkAzIdjAqMpcoAFWmaTHu5S8U27IFyErC5u10HDGZDWc1CL5i0o_3M68dNmZ2ybZlkfW7nQyzKX2vS3L54s6Tv8-ZUE8-gkWvgxd6uxSnPuqtIv3YP7QA=s300-c' width='60' height='60'>Anya</h1>
 <p align="center"> Este es un Bot Multifunciones </p>
 
 <p align="center">
