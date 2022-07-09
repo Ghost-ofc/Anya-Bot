@@ -9,7 +9,7 @@ Rewrite for Tamako that will be written on the freshly released of djs is just a
 
 ---
 
-<h1 align="center"> <img src='https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2022/06/Soy-x-family-anya-hija-biologica.jpg?resize=1280%2C720&quality=80&ssl=1' height='50'>Anya</h1>
+<h1 align="center"> <img src='https://www.egames.news/__export/1651440651304/sites/debate/img/2022/05/01/anya_spy_xfamily.jpg_172596871.jpg' height='50'>Anya</h1>
 <p align="center">This Project depends on <a href="https://github.com/BearTS/tamako-microservices">Microservices</a></p>
 <p align="center"> A Multipurpose Feature Rich Discord Bot </p>
 
