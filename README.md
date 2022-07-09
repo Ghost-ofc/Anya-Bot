@@ -26,10 +26,10 @@ Rewrite for Tamako that will be written on the freshly released of djs is just a
   <a href="https://nodejs.org/dist/latest-v16.x/">
     <img src="https://img.shields.io/static/v1?label=node&message=>=16.0.0&color=success&logo=Node.js&logoColor=white" alt="Node Requirements">
   </a>
-  <!-- <a href="https://github.com/BearTS/Tamako">
-    <img src="https://img.shields.io/github/workflow/status/BearTS/Tamako/Docker%20Image" alt="build">
+  <!-- <a href="https://github.com/Ghost-ofc/Anya-Bot">
+    <img src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2022/06/Soy-x-family-anya-hija-biologica.jpg?resize=1280%2C720&quality=80&ssl=1" alt="build">
   </a> -->
-  <a href="https://discord.gg/dDnmY56">
+  <a href="https://discord.gg/D4auUu32">
     <img src="https://img.shields.io/discord/744871453060759682?color=%237289DA&label=Support&logo=discord&logoColor=white" alt="Online">
   </a>
 </p>
