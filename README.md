@@ -36,7 +36,7 @@
 
 ---
 
-[Click here to Invite me](https://discord.com/api/oauth2/authorize?client_id=721100913611112470&permissions=1644972474359&scope=bot%20applications.commands)
+[Click here to Invite me](https://discord.com/api/oauth2/authorize?client_id=826469305759694848&permissions=1644971949559&scope=bot%20applications.commands)
 
 ### ¿Por qué deberías invitar a Anya?
 Anya es el unico bot que necesitara tu servidor.
@@ -47,18 +47,9 @@ Con Anya,
 - Anya puede reproducir música.
 
 
-/*Check the docs at <a href="https://tamako.tech/">Tamako Tech</a>
-
-Tamako is now open source and this is a rewrite of Code of Tamako and This repository will NOT INCLUDE all the features 
-that are present in Tamako Bot.
-
-
-## Contribution
+## Contribucion
 Si le encanta este trabajo y desea contribuir de otra manera, únase a nuestro servidor de soporte (que no es mucho) y haga ping/mencione a JuanD#4698 allí.
 
-## Honourable Mentions
-- Nadie
 
-
-## Disclaimer
+## Descargo de responsabilidad
 El desarrollador de Anya no está afiliado, de ninguna manera, con el creador de Spy x family, ni con el equipo de producción que reunió el anime y, de ninguna manera, se beneficia financieramente de las ventas que produce la serie.
