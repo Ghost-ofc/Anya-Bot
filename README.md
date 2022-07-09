@@ -6,7 +6,7 @@
 
 ---
 
-<h1 align="left"> <img src='https://www.egames.news/__export/1651440651304/sites/debate/img/2022/05/01/anya_spy_xfamily.jpg_172596871.jpg' height='60'>Anya</h1>
+<h1 align="center"> <img src='https://www.egames.news/__export/1651440651304/sites/debate/img/2022/05/01/anya_spy_xfamily.jpg_172596871.jpg' width='60' height='60'>Anya</h1>
 <p align="center"> Este es un Bot Multifunciones </p>
 
 <p align="center">
