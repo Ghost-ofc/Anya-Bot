@@ -6,7 +6,7 @@
 
 ---
 
-<h1 align="center"> <img src='https://blogger.googleusercontent.com/img/a/AVvXsEgi1S4B9xqc82m4HoZ2qyCLyH6QA1hB7aWrK92fMOHhknvwatevP76BDc_FiqduXlSNQUoIQQkAzIdjAqMpcoAFWmaTHu5S8U27IFyErC5u10HDGZDWc1CL5i0o_3M68dNmZ2ybZlkfW7nQyzKX2vS3L54s6Tv8-ZUE8-gkWvgxd6uxSnPuqtIv3YP7QA=s300-c' width='60' height='60'>Anya</h1>
+<h1 align="center"> <img src='https://static.zerochan.net/Anya.Forger.full.3428862.png' height='60'>Anya</h1>
 <p align="center"> Este es un Bot Multifunciones </p>
 
 <p align="center">
