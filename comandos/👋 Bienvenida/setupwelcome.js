@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const setupSchema = require(`${process.cwd()}/modelos/setups.js`);
+const setupSchema = require(`${process.cwd()}/modelos/servidor.js`);
 
 module.exports = {
     name: "setup-welcome",
