@@ -35,7 +35,19 @@ module.exports = (client, Discord) => {
     client.distube.on("playSong", (queue, song)=>{
         queue.textChannel.send({
             embeds: [new Discord.MessageEmbed()
-            .setTitle(`Escuchando \`${song.name}\` - \`${song.formatteDuration}\` `)
+            .setTitle(`Escuchando \`${song.name}\` - \`${song.formattedDuration}\` `)
+            .setThumbnail(song.thumbnail)
+            .setURL(song.url)
+            .setColor("#8400ff")
+            .setFooter({text: `Añadida por ${song.user.tag}`, iconURL: song.user.displayAvatarURL({dynamic: true})})
+            ]
+        })
+    });
+
+    client.distube.on("addSong", (queue, song)=>{
+        queue.textChannel.send({
+            embeds: [new Discord.MessageEmbed()
+            .setTitle(`✅ Añadiendo \`${song.name}\` - \`${song.formattedDuration}\` `)
             .setThumbnail(song.thumbnail)
             .setURL(song.url)
             .setColor("#8400ff")
