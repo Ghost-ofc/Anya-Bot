@@ -136,4 +136,3 @@ async function generar_bienvenida(member, data) {
         return attachment;
     } catch (e) { console.log(e) }
 }
-}
