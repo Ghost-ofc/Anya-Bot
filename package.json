@@ -2,10 +2,8 @@
   "name": "discord-bot-main",
   "version": "1.0.0",
   "description": "Como este vendria a ser mi primer proyecto, espero este bien y sea de ayuda a alguien.",
-  "main": "index.js",
-  "engines": {
-    "node": ">=16"
-  },
+  "main": "index.js"
+},
   "dependencies": {
     "@discordjs/opus": "^0.8.0",
     "@distube/soundcloud": "^1.1.0",
@@ -27,6 +25,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.11.0"
   },
   "author": "",
   "license": "ISC",
