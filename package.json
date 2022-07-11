@@ -2,8 +2,10 @@
   "name": "discord-bot-main",
   "version": "1.0.0",
   "description": "Como este vendria a ser mi primer proyecto, espero este bien y sea de ayuda a alguien.",
-  "main": "index.js"
-},
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@discordjs/opus": "^0.8.0",
     "@distube/soundcloud": "^1.1.0",
@@ -22,9 +24,6 @@
     "naotori": "^1.1.1",
     "nodemon": "^2.0.7",
     "weather-js": "^2.0.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": "16.16.0",
