@@ -1,6 +1,6 @@
 const Canvas = require('canvas');
 const Discord = require('discord.js');
-const setupSchema = require(`${process.cwd()}/modelos/setups.js`);
+const setupSchema = require(`${process.cwd()}/modelos/servidor.js`);
 module.exports = client => {
     console.log("CARGADO EL MÓDULO DE BIENVENIDAS")
     client.on("guildMemberAdd", async member => {
@@ -28,7 +28,7 @@ async function generar_bienvenida(member, data) {
         try {
             fondo = await Canvas.loadImage(data.bienvenida.imagen)
         } catch(e){
-            fondo = await Canvas.loadImage("https://i.imgur.com/p45d8ha.png?width=1095&height=616");
+            fondo = await Canvas.loadImage("https://media.discordapp.net/attachments/934868220752568420/954836648514949120/niby_wallpaper.png?width=1095&height=616");
         }
         ctx.drawImage(fondo, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 0.5
@@ -135,4 +135,5 @@ async function generar_bienvenida(member, data) {
         const attachment = new Discord.MessageAttachment(canvas.toBuffer(), `bienvenida-${member.user.username}.png`);
         return attachment;
     } catch (e) { console.log(e) }
+}
 }
