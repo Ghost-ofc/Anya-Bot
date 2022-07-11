@@ -28,7 +28,7 @@ async function generar_bienvenida(member, data) {
         try {
             fondo = await Canvas.loadImage(data.bienvenida.imagen)
         } catch(e){
-            fondo = await Canvas.loadImage("https://imgur.com/a/R6FM8dS?width=1095&height=616");
+            fondo = await Canvas.loadImage("https://i.imgur.com/UjV9SuV.png?width=1095&height=616");
         }
         ctx.drawImage(fondo, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 0.5
