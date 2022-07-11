@@ -2,6 +2,7 @@ const schema = require(`${process.cwd()}/modelos/servidor.js`);
 
 module.exports = {
     name:"prefix",
+    owner: true,
     aliases:["prefijo","cambiar prefijo", "cambiar prefix"],
     desc:"Strve para cambiar el prefijo del bot en el servidor",
     run: async(client, message, args, prefix) => {
