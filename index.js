@@ -16,7 +16,7 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
 function requerirhandlers(){
-  ["commands", "events", "distube"].forEach(handler => {
+  ["commands", "events", "distube", "MemberAdd"].forEach(handler => {
     try {
       require(`./handlers/${handler}`)(client, Discord)
     }catch(e){
@@ -27,4 +27,4 @@ function requerirhandlers(){
 
 requerirhandlers();
 
-client.login(config.token)
+client.login(config.token).catch(() => console.log(`-[X]- NO HAS ESPECIFICADO UN TOKEN VALIDO -[X]-`.red))
