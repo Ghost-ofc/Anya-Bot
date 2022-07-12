@@ -16,7 +16,7 @@ module.exports = async (client, message) => {
     if(command){
 
         if(command.owner){
-            if(config.ownerIDS.includes(message.author.id)) return message.reply(`❌ **Solo el dueño de este bot puede ejecutar este comando**\n Dueños del bot: ${config.ownerIDS.map(ownerid => `<@${ownerid}>`)}`)
+            if(!config.ownerIDS.includes(message.author.id)) return message.reply(`❌ **Solo el dueño de este bot puede ejecutar este comando**\n Dueño del bot: ${config.ownerIDS.map(ownerid => `<@${ownerid}>`)}`)
         }
 
         if(command.permisos){
