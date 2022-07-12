@@ -19,6 +19,7 @@
     "dotenv": "^16.0.1",
     "enmap": "^5.9.0",
     "ffmpeg-static": "^4.4.1",
+    "fs": "^0.0.1-security",
     "mathjs": "^10.6.4",
     "mongoose": "^6.4.4",
     "ms": "^2.1.3",
