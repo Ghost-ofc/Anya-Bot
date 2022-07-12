@@ -9,7 +9,7 @@ module.exports = {
         let member = message.mentions.users.first();
         if(!member){
             const embed=new Discord.MessageEmbed()
-                .setTitle(`**Avartar de: ${message.author.tag}**`)
+                .setTitle(`**Avatar de: ${message.author.tag}**`)
                 .setImage(`${message.author.avatarURL()}?size=256`)
                 .setColor(0x66b3ff)
                 .setFooter(`Avatar de ${message.author.tag}`);
