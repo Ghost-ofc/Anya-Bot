@@ -7,5 +7,5 @@ const serverSchema = new mongoose.Schema({
     sugerencias: { type: String, default: "" },
     bienvenida: { type: Object, default: { canal: "", mensaje: "", imagen: "" } },
 })
-const model= mongoose.model("ConfigServer", serverSchema);
+const model= mongoose.model("Configuraciones", serverSchema);
 module.exports = model;
