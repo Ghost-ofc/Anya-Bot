@@ -22,6 +22,8 @@
     "mathjs": "^10.6.4",
     "mongoose": "^6.4.4",
     "naotori": "^1.1.1",
+    "neko": "^1.1.2",
+    "nekos.life": "^3.0.0",
     "nodemon": "^2.0.7",
     "weather-js": "^2.0.0"
   },
