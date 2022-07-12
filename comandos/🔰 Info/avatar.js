@@ -16,7 +16,7 @@ module.exports = {
             message.channel.send({embeds:[embed]})
     }else{
       const embed2 = new Discord.MessageEmbed()
-        .setTitle(`**Avartar de: ${member.tag}**`)
+        .setTitle(`**Avatar de: ${member.tag}**`)
         .setImage(`${member.avatarURL()}?size=256`)
         .setColor(0x66b3ff)
         .setFooter(`Avatar de ${member.tag}`);
