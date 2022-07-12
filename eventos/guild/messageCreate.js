@@ -13,7 +13,9 @@ module.exports = async (client, message) => {
     const cmd = args.shift()?.toLowerCase();
     const command = client.commands.get(cmd)||client.commands.find(c => c.aliases && c.aliases.includes(cmd));
     
-    if(message.mentions.members.first.has(client.user)) return message.reply(`Hola! Mi nombre es ${client.user.tag}, si quieres ver mis comandos usa ${prefix}help!`)
+    if(message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
+      message.reply(`Hola soy ${client.user} para ver mi prefix usa ${prefix}comandos`)
+    }
 
     if(command){
 
