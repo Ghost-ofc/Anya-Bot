@@ -2,7 +2,6 @@ const serverSchema = require(`${process.cwd()}/modelos/servidor.js`);
 const setupSchema = require(`${process.cwd()}/modelos/setups.js`);
 const warnSchema = require(`${process.cwd()}/modelos/warns.js`);
 const ecoSchema = require(`${process.cwd()}/modelos/economia.js`);
-const welcomeSchema = require(`${process.cwd()}/modelos/bienvenida.js`);
 const config = require(`${process.cwd()}/config/config.json`);
 const Discord = require('discord.js')
 
@@ -52,16 +51,6 @@ async function asegurar_todo(guildid, userid) {
                 warnings: [],
             });
             await warn_data.save();
-        }
-    }
-    if(guildid){
-        let welcome_data = welcomeSchema.findOne({ guildID: guildid })
-        if(!welcome_data){
-            console.log(`Asegurado: Bienvenida en ${guildid}`.green);
-            welcome_data = await new welcomeSchema({
-                guildID: guildid,
-            });
-            await welcome_data.save();
         }
     }
 }
