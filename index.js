@@ -15,7 +15,7 @@ const client = new Discord.Client({
 client.on("ready", () => {
   console.log(`Todo  está activo!`)
   const Estado = [
-    `Ayuda con .help`,
+    `Animando canales uwu`,
     `Anya Bot!`,
   ];
 
