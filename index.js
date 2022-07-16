@@ -72,7 +72,7 @@ client.on('messageDelete', function(message, channel) {
 })
 
 function requerirhandlers(){
-  ["commands", "events", "distube", "MemberAdd"].forEach(handler => {
+  ["commands", "events", "distube"].forEach(handler => {
     try {
       require(`./handlers/${handler}`)(client, Discord)
     }catch(e){
