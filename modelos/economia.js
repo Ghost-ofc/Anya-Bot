@@ -6,6 +6,7 @@ const ecoSchema = new mongoose.Schema({
     banco: {type: Number, default: 100},
     daily: String,
     work: String,
+    crime: String,
 })
 
 const model = mongoose.model("economia", ecoSchema);
