@@ -26,27 +26,6 @@ client.on("ready", () => {
 })
 
 
-
-client.on('guildMemberAdd', async (member) => {
-   
-    const embed = new Discord.MessageEmbed()
-    .setColor("#0ff12d")
-    .setTitle(`Welcome to Trees & Moons`)
-    .setDescription(`¡Welcome  __**${member.user.username}**__ to Trees & Moons\n\n`)
-    .setThumbnail(member.user.displayAvatarURL())
-    .setFooter({text: `❤️`,  IconURL: `https://i.imgur.com/CL9Fkoy.jpeg` })
-    .setTimestamp();
-
-    ///// envia el embed :D
-    client.channels.cache.get('949138580415062019').send({ embeds: [embed],  content: `**Hello ${member}!** **remember to have a good time**` })
-
-})  
-
-
-
-
-
-
 client.on("guildCreate", (guild) => {
    
   const canalinv = guild.channels.cache.find(canal => canal.type === 'GUILD_TEXT' && canal.permissionsFor(guild.me).has('SEND_MESSAGES'))
