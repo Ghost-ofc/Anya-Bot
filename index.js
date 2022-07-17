@@ -9,13 +9,14 @@ const client = new Discord.Client({
     Discord.Intents.FLAGS.GUILD_MESSAGES,
     Discord.Intents.FLAGS.GUILD_MEMBERS,
     Discord.Intents.FLAGS.GUILD_VOICE_STATES,
+    Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
   ],
 });
 
 client.on("ready", () => {
   console.log(`Todo  está activo!`)
   const Estado = [
-    `Ayuda con .help`,
+    `Ayudando a mejorar tu server uwu`,
     `Anya Bot!`,
   ];
 
@@ -66,7 +67,7 @@ client.on('messageDelete', function(message, channel) {
 })
 
 function requerirhandlers(){
-  ["commands", "events", "distube"].forEach(handler => {
+  ["commands", "events", "distube", "sorteos"].forEach(handler => {
     try {
       require(`./handlers/${handler}`)(client, Discord)
     }catch(e){
