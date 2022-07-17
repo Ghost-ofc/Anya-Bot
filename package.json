@@ -46,6 +46,7 @@
     "substring": "^1.0.0",
     "sweep": "^0.1.0",
     "twemoji-parser": "^14.0.0",
+    "util": "^0.12.4",
     "weather-js": "^2.0.0",
     "weky": "^3.1.8",
     "zeew": "^2.1.6"
