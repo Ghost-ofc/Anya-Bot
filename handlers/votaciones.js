@@ -106,7 +106,7 @@ module.exports = client => {
                     interaction.reply({
                         embeds: [new Discord.MessageEmbed()
                         .setTitle(`Votes`)
-                        .addField(`✅ Positive Votes`, msg_data.yes.length >= 1 ? msg_data.si.map(u => `<@${u}>\n`).toString() : "No Votes", true)
+                        .addField(`✅ Positive Votes`, msg_data.yes.length >= 1 ? msg_data.yes.map(u => `<@${u}>\n`).toString() : "No Votes", true)
                         .addField(`❌ Negative Votes`, msg_data.no.length >= 1 ? msg_data.no.map(u => `<@${u}>\n`).toString() : "No Votes", true)
                         .setColor(client.color)
                         ],
