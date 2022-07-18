@@ -102,7 +102,7 @@ async function generar_bienvenida(member, data) {
         ctx.shadowColor = "black";
         ctx.shadowBlur = 15;
         
-        ctx.fillText("BIENVENID@", canvas.width / 2, canvas.height / 2 + 64 + 68)
+        ctx.fillText("Welcome", canvas.width / 2, canvas.height / 2 + 64 + 68)
         //TEXTO USUARIO
         ctx.fillStyle = "white";
         ctx.textAlign = "center";
@@ -130,7 +130,7 @@ async function generar_bienvenida(member, data) {
         ctx.shadowColor = "black";
         ctx.shadowBlur = 15;
         
-        ctx.fillText(`Eres el miembro #${member.guild.memberCount}`, canvas.width / 2, canvas.height - 24)
+        ctx.fillText(`You are the member #${member.guild.memberCount}`, canvas.width / 2, canvas.height - 24)
         //get it as a discord attachment
         const attachment = new Discord.MessageAttachment(canvas.toBuffer(), `bienvenida-${member.user.username}.png`);
         return attachment;
