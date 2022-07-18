@@ -6,7 +6,7 @@ const setupSchema = new mongoose.Schema({
     sistema_tickets: { type: Object, default: { canal: "", mensaje: "" } },
     sugerencias: { type: String, default: "" },
     votaciones: { type: String, default: ""},
-    bienvenida: { type: Object, default: { canal: "", mensaje: "", imagen: "" } },
+    bienvenida: { type: Object, default: { canal: "", mensaje: ``, imagen: "" } },
 })
 
 const model = mongoose.model("Configuraciones", setupSchema);
