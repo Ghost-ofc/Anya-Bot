@@ -5,6 +5,7 @@ const setupSchema = new mongoose.Schema({
     reaccion_roles: Array,
     sistema_tickets: { type: Object, default: { canal: "", mensaje: "" } },
     sugerencias: { type: String, default: "" },
+    votaciones: { type: String, default: ""},
     bienvenida: { type: Object, default: { canal: "", mensaje: "", imagen: "" } },
 })
 
