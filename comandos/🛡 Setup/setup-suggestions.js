@@ -10,7 +10,7 @@ module.exports = {
     run: async (client, message, args, prefix) => {
         if(!args.length) return message.reply("❌ **Tienes que especificar el canal de sugerencias!**")
         const channel = message.guild.channels.cache.get(args[0]) || message.mentions.channels.first();
-        if(!channel || channel.type !== "GUILD_ADVERTISEMENTS" || "GUILD_TEXT") return message.reply("❌ **El canal de sugerencias que has mencionado no existe!**");
+        //if(!channel || channel.type !== "GUILD_ADVERTISEMENTS" || "GUILD_TEXT") return message.reply("❌ **El canal de sugerencias que has mencionado no existe!**");
         await setupSchema.findOneAndUpdate({guildID: message.guild.id}, {
             sugerencias: channel.id
         })
