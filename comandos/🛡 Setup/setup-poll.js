@@ -10,7 +10,7 @@ module.exports = {
     run: async (client, message, args, prefix) => {
         if(!args.length) return message.reply("❌ **Tienes que especificar el canal de votaciones!**")
         const channel = message.guild.channels.cache.get(args[0]) || message.mentions.channels.first();
-        if(!channel || channel.type !== "GUILD_TEXT") return message.reply("❌ **El canal de votaciones que has mencionado no existe!**");
+        //if(!channel || channel.type !== "GUILD_TEXT") return message.reply("❌ **El canal de votaciones que has mencionado no existe!**");
         await setupSchema.findOneAndUpdate({guildID: message.guild.id}, {
             votaciones: channel.id
         })
