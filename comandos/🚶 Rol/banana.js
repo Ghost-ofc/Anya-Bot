@@ -4,7 +4,7 @@ module.exports = {
   name: "banana",
   alias: ["Banana"],
   run: async(client, message, args) => {
-    let porcentajes = Math.floor(Math.random() * 100)
+    let porcentajes = Math.floor(Math.random() * (30-1)+1)
 
     const embed = new Discord.MessageEmbed()   
       .setTitle(`La banana de **${message.author.username}** mide **${porcentajes} cm**`)
