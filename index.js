@@ -24,7 +24,13 @@ client.on("ready", () => {
         client.user.setPresence({ activities: [{ name: Estado[Math.floor(Math.random() * Estado.length)] }], status: 'online', type: "WATCHING" })
     }, 30000)
 })
+client.on('messageCreate', async(message) => {
 
+  if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`){
+    return message.reply(`**:admin_qlo: Hola __${message.author.username}__, estoy feliz de ser de ayuda en tu server!**\n ↳  *Usa \`>help\` para ver todos mis comandos!*`)
+  }
+
+})
 
 client.on("guildCreate", (guild) => {
    
