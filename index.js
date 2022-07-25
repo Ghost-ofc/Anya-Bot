@@ -27,7 +27,7 @@ client.on("ready", () => {
 client.on('messageCreate', async(message) => {
 
   if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`){
-    return message.reply(`**:admin_qlo: Hola __${message.author.username}__, estoy feliz de ser de ayuda en tu server!**\n ↳  *Usa \`>help\` para ver todos mis comandos!*`)
+    return message.reply(`**❄️ Hola __${message.author.username}__, estoy feliz de ser de ayuda en tu server!**\n ↳  *Usa \`>help\` para ver todos mis comandos!*`)
   }
 
 })
