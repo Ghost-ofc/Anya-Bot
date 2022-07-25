@@ -19,6 +19,7 @@
     "discord-giveaways": "^5.2.2",
     "discord-html-transcripts": "^2.5.8",
     "discord.js": "^13.8.1",
+    "discord.js-akinator": "^3.4.5",
     "distube": "^3.3.4",
     "dotenv": "^16.0.1",
     "emoji-regex": "^10.1.0",
