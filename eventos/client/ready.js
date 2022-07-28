@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-const config = require('../../config/config.json');
+//const config = require('../../config/config.json');
+require('dotenv').config()
 module.exports = client => {
     
-    mongoose.connect(config.mongodb,{
+    mongoose.connect(process.env.mongodb,{
         useNewURLParser: true,
         useUnifiedTopology: true,
     }).then(() => {
