@@ -1,5 +1,4 @@
-//const config = require(`${process.cwd()}/config/config.json`)
-require('dotenv').config()
+const config = require(`${process.cwd()}/config/config.json`)
 const serverSchema = require(`${process.cwd()}/modelos/servidor.js`)
 const { asegurar_todo } = require(`${process.cwd()}/handlers/funciones.js`)
 module.exports = async (client, message) => {
@@ -12,7 +11,7 @@ module.exports = async (client, message) => {
     const command = client.commands.get(cmd) || client.commands.find(c => c.aliases && c.aliases.includes(cmd));
     if (command) {
         if (command.owner) {
-            if (!process.env.ownerIDS.includes(message.author.id)) return message.reply(`❌ **Solo los dueños de este bot pueden ejecutar este comando!**\n**Dueños del bot:** ${process.env.ownerIDS.map(ownerid => `<@${ownerid}>`)}`)
+            if (!config.ownerIDS.includes(message.author.id)) return message.reply(`❌ **Solo los dueños de este bot pueden ejecutar este comando!**\n**Dueños del bot:** ${config.ownerIDS.map(ownerid => `<@${ownerid}>`)}`)
         }
         if(command.premium){
             if(data.premium){
