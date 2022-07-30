@@ -58,7 +58,7 @@ module.exports = {
                     .setColor(client.color)
                     .setThumbnail(message.guild.iconURL({ dynamic: true }))
                     .setDescription(comandos_de_categoria.length >= 1 ? `>>> *${comandos_de_categoria.map(comando => `\`${comando.replace(/.js/, "")}\``).join(" - ")}*` : `>>> *Todavía no hay comandos en esta categoría...*`)
-                    .setFooter({ text: `Página ${index+2} / ${categorias.length+1}\n© desarollado por dewstouh#1088 | 2022`, iconURL: `https://images-ext-2.discordapp.net/external/G2O3wNQkWm957e5Qv3xUpceIQozUug5Z_dfyP9aIKYQ/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/282942681980862474/c2136834f15c6f8633c19c72feeb2427.webp` })
+                    .setFooter({ text: `Página ${index+2} / ${categorias.length+1}\n© desarollado por JuanD#4698 | 2022`, iconURL: `https://images-ext-2.discordapp.net/external/G2O3wNQkWm957e5Qv3xUpceIQozUug5Z_dfyP9aIKYQ/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/282942681980862474/c2136834f15c6f8633c19c72feeb2427.webp` })
                 embeds_pages.push(embed)
             })
 
