@@ -33,7 +33,7 @@ module.exports = {
         axios.get(`https://citasenlinea.sisol.gob.pe/Account/FnGetPaciente?idTipoDocumento=1&nroDocumento=${DNI}`
         ).then(res => {
 
-            if(res.data == null) return message.reply("No se ha encontrado el dni");
+            if(res.data == null) return message.reply("❌ **No se ha encontrado el dni**");
             let {numDocumento, noNombres, apePaterno, apeMaterno, idUbigeoReniec, deDireccion, idSexo, feNacimiento} = res.data
 
             const embed = new MessageEmbed()
