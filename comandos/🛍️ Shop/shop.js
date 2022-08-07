@@ -1,24 +1,25 @@
-const { paginacion } = require(`${process.cwd()}/handlers/funciones.js`);
-const ecoSchema = require(`${process.cwd()}/modelos/economia.js`);
-var items = {
-    1: "**HBO MAX** \`[ID: 01]\` **-** **950**\n*Cuenta HBO MAX uwu.*",
-    2: "**Disney** \`[ID: 02]\` **-** **950**\n*Cuenta de Disney uwu.*",
-    3: "**Crunchyroll** \`[ID: 03]\` **-** **750**\n*Cuenta de Crunchyroll uwu.*",
-    4: "**Viki** \`[ID: 04]\` **-** **500**\n*Cuenta de Viki uwu.*",
-    5: "**Spotify** \`[ID: 05]\` **-** **800**\n*Cuenta de Spotify uwu.*",
-    6: "**Canva** \`[ID: 06]\` **-** **300**\n*Cuenta de Canva uwu.*"
-}
-
+const { Client, Message, MessageEmbed } = require('discord.js');
+const items = require('../../modelos/shopitems.js')
+const Discord = require("discord.js");
 
 module.exports = {
     name: "Shop",
     aliases: ["shop", "tienda", "Store"],
     desc: "Comprar cosas del bot",
-    run: async (client, message, args, prefix) => {
-        const total = await ecoSchema.find();
-        await message.guild.members.fetch();
-        const ordenado = total.filter(member => message.guild.members.cache.get(member.userID)).sort((a, b) => Number((b.dinero + b.banco) - (a.dinero + a.banco)));
-        const texto = ordenado.map((miembro, index) => `\`${index + 1}\` - ${items[index + 1] ?? ""}\n\n`)
-        paginacion(client, message, texto, "<:bueno:1001247796881530953> Bienvenido a la tiendita")
-    }
+    run: async(client,message,args, prefix) => {
+        if(items.length === 0 ) return message.channel.send(`❌ No hay ningun articulo en la tienda!`)
+  
+        const shopList = items
+        .map((value, index) => {
+          return `**${index+1})**\nName: ${value.item[0].toUpperCase()}${value.item.slice(1).toLowerCase()} ${value.emoji || "¡No hay emoji de este artículo!"}\nPrecio: ${value.price} :dollar:`
+        }).join("\n\n")
+        
+        const shopEmbed = new Discord.MessageEmbed()
+        .setTitle("Tienda Anya :shopping_cart:!")
+        .setColor("#A7D28B")
+        .setFooter("Pedida por "+ message.author.tag)
+        .setDescription(`${shopList}`)
+        .setTimestamp();
+        message.channel.send({ embeds: [shopEmbed] })
+      }
 }
