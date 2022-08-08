@@ -76,7 +76,7 @@ seguridad = "MUY ALTO";
       },
       {
         name: `<:arrow:985092509216690176>   **Roles**`,
-        value: `**[${guild.roles.cache.size}]** roles`
+        value: `**[$${message.member.guild.roles.cache.size}]** roles`
       }
     )
     message.channel.send({embeds: [serv]})
