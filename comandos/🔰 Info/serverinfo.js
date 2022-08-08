@@ -75,7 +75,7 @@ seguridad = "MUY ALTO";
         inline: true
       },
       {
-        name: `<🎌 **Roles**`,
+        name: `🎌 **Roles**`,
         value: `**[$${message.member.guild.roles.cache.size}]** roles`
       }
     )
