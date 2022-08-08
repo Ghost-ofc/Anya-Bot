@@ -22,7 +22,7 @@ module.exports = {
         const itemPrice = items.find((val) => (val.item.toLowerCase()) === itemToBuy).price;
   
         const userBalance = await ecoSchema.findOne({userID: message.author.id});
-        if(userBalance < itemPrice) return message.channel.send(`❌ ¡No tienes suficiente saldo en tu billetera para comprar este artículo! [item: **${itemToBuy}**]`)
+        if(userBalance.dinero < itemPrice) return message.channel.send(`❌ ¡No tienes suficiente saldo en tu billetera para comprar este artículo! [item: **${itemToBuy}**]`)
   
         const params = {
           Guild: message.guild.id,
