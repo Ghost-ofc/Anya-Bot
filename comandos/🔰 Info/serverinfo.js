@@ -58,7 +58,7 @@ seguridad = "MUY ALTO";
       },
       {
         name: `<:hashtag:975425278195146802> ** Channels**`,
-        value: `**${channels.filter(channel => channel.type === 'GUILD_TEXT').size}** text | **${channels.filter(channel => channel.type === 'GUILD_VOICE').size}** voice`,
+        value: `**${message.guild.channels.cache.size}**`,
         inline: true
       },
       {
