@@ -35,7 +35,7 @@ seguridad = "MUY ALTO";
     .setColor(`#a51400`)
     .addFields(
       {
-        name: `<:ServerOwner:981456566073053235> **Owner**`,
+        name: `<:admin_qlo:979887657364652044 **Owner**`,
         value: `<@${message.guild.ownerId}>`,
         inline: true
       },
@@ -52,17 +52,17 @@ seguridad = "MUY ALTO";
     )
     .addFields(
       {
-        name: `<:DiscordMembers:975424273583857694> **Total Miembros**`,
+        name: `🧑‍💻 **Total Miembros**`,
         value: `**${message.guild.memberCount}** members`,
         inline: true
       },
       {
-        name: `<:hashtag:975425278195146802> ** Channels**`,
+        name: `⚔️ ** Channels**`,
         value: `**${message.guild.channels.cache.size}**`,
         inline: true
       },
       {
-        name: `<:buffCord:975426852606836746> **Verification level**`,
+        name: `⚙️ **Verification level**`,
         value: `${seguridad}`,
         inline: true
       }
@@ -70,12 +70,12 @@ seguridad = "MUY ALTO";
 
     .addFields(
       {
-        name: `<:boost_pink_heart:975424277392269342> **Boost**`,
+        name: `☄️ **Boost**`,
         value: `**${message.guild.premiumSubscriptionCount}** boost`,
         inline: true
       },
       {
-        name: `<:arrow:985092509216690176>   **Roles**`,
+        name: `<🎌 **Roles**`,
         value: `**[$${message.member.guild.roles.cache.size}]** roles`
       }
     )
