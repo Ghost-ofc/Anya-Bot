@@ -36,7 +36,7 @@ seguridad = "MUY ALTO";
     .addFields(
       {
         name: `<:ServerOwner:981456566073053235> **Owner**`,
-        value: `${message.guild.owner}\n\`${message.guild.owner.tag}\``,
+        value: `<@${message.guild.ownerId}>`,
         inline: true
       },
       {
