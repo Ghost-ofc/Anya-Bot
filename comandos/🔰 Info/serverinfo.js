@@ -35,7 +35,7 @@ seguridad = "MUY ALTO";
     .setColor(`#a51400`)
     .addFields(
       {
-        name: `<:admin_qlo:979887657364652044 **Owner**`,
+        name: `<:admin_qlo:979887657364652044> **Owner**`,
         value: `<@${message.guild.ownerId}>`,
         inline: true
       },
