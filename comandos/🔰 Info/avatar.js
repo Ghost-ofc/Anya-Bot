@@ -1,31 +1,31 @@
-const Discord = require("discord.js");
-const {Client,Collection} = require("discord.js");
-module.exports = {
-    name:"avatar",
-    aliases: ["a"],
-    description:"Enseñar los avatar",
-    usage:"+avatar[@user]",
-  run: async(client,message,args, prefix)=>{
-        let member = message.mentions.users.first();
-        if(!member){
-            const embed=new Discord.MessageEmbed()
-                .setImage(`${message.author.avatarURL()}`)
-                .setColor(0x66b3ff)
-                .setFooter(`Avatar de${message.author.tag}`);
-            message.channel.send({embeds:[embed]})
-    }else{
-      const embed2 = new Discord.MessageEmbed()
-        .setTitle(`**Avartar de: ${member.tag}**`)
-        .setImage(`${member.avatarURL()}`, height="100", width="100")
-        .setColor(0x66b3ff)
-        .setFooter(`Avatar de ${member.tag}`);
-   
-        message.channel.send({embeds:[embed2]})
+const Discord = require('discord.js');
+const {MessageActionRow, MessageSelectMenu, MessageEmbed, MessageButton} = require('discord.js');
 
-    if(!message.guild.me.permissions.has("EMBED_LINKS"))
-       return message.reply(
-         "No tengo permisos para mensajes de brasaseinsertar enlaces"
-       );
+module.exports = {
+    name: "avatar",
+    aliases: [],
+
+    run: async (client, message, args) => {
+
+        let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
+
+        let png = user.avatarURL({ format: 'png', dynamic: true, size: 1024 })
+        let jpg = user.avatarURL({ format: 'jpg', dynamic: true, size: 1024 })
+        let webp = user.avatarURL({ format: 'webp', dynamic: true, size: 1024 })
+
+
+        const avatar = new Discord.MessageEmbed()
+            .setAuthor({ name: "Avatar of " + user.tag, iconURL: user.displayAvatarURL({ dynamic: true }) })
+            .setImage(user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+            .setColor("RANDOM")
+
+        message.channel.send({ embeds: [avatar], components: [new Discord.MessageActionRow().addComponents(
+            [
+                new Discord.MessageButton().setStyle("LINK").setEmoji("📷").setLabel("PNG").setURL(`${png}`),
+                new Discord.MessageButton().setStyle("LINK").setEmoji("📷").setLabel("JPG").setURL(`${jpg}`),
+                new Discord.MessageButton().setStyle("LINK").setEmoji("📷").setLabel("WEBP").setURL(`${webp}`),
+            ]
+        )]})
     }
-  }
+    
 }
