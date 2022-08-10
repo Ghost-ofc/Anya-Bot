@@ -32,10 +32,11 @@ module.exports = (client, Discord) => {
         ],
     });
 
-    client.distube.on("playSong", (queue, song)=>{
+    client.distube.on("playSong", (queue, song) => {
         queue.textChannel.send({
             embeds: [new Discord.MessageEmbed()
-            .setTitle(`Escuchando \`${song.name}\` - \`${song.formattedDuration}\` `)
+            .setTitle(`Estas escuchando ♫`)
+            .setDescription(`${song.name}\n\`${song.formattedDuration}\``)
             .setThumbnail(song.thumbnail)
             .setURL(song.url)
             .setColor("#8400ff")
@@ -47,7 +48,7 @@ module.exports = (client, Discord) => {
     client.distube.on("addSong", (queue, song)=>{
         queue.textChannel.send({
             embeds: [new Discord.MessageEmbed()
-            .setTitle(`✅ Añadiendo \`${song.name}\` - \`${song.formattedDuration}\` `)
+            .setTitle(`♫ Añadiendo \`${song.name}\` - \`${song.formattedDuration}\` `)
             .setThumbnail(song.thumbnail)
             .setURL(song.url)
             .setColor("#8400ff")
