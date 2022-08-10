@@ -1,6 +1,6 @@
 module.exports = {
     name: "play",
-    aliases: ["reproducir"],
+    aliases: ["reproducir", "p"],
     desc: "Sirve para reproducir una cancion",
     run: async(client, message, args, prefix) => {
         if(!args.length) return message.reply('❌ **Tienes que especificar el nombre de la cancion!!**');
