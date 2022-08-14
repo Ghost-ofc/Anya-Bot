@@ -15,7 +15,7 @@ module.exports = {
         }).join("\n\n")
         
         const shopEmbed = new Discord.MessageEmbed()
-        .setTitle("Tienda Anya :shopping_cart:!")
+        .setTitle("Tienda de Jamyuu :shopping_cart:!")
         .setColor("#A7D28B")
         .setFooter("Pedida por "+ message.author.tag)
         .setDescription(`${shopList}`)
