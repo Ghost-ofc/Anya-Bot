@@ -17,7 +17,7 @@ client.on("ready", () => {
   console.log(`Todo  está activo!`)
   const Estado = [
     `Ayudando a mejorar tu server uwu`,
-    `Anya Bot!`,
+    `Jamyuu!`,
   ];
 
  setInterval(() => {
