@@ -10,11 +10,6 @@ module.exports = [
       emoji: ":banana:"
     },
     {
-      item: "lipstick",
-      price: 463,
-      emoji: ":lipstick:"
-    },
-    {
       item: "phone",
       price: 4000,
       emoji: ":iphone:"
@@ -28,5 +23,15 @@ module.exports = [
       item: "laptop",
       price: 12000,
       emoji: ":computer:"
+    },
+    {
+      item: "Disney",
+      price: 10000,
+      emoji: ":gem:"
+    },
+    {
+      item: "Hbo",
+      price: 10000,
+      emoji: ":green_heart:"
     },
   ]
