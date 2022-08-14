@@ -4,7 +4,7 @@ const axios = require('axios');
 module.exports = {
     name: "dni",
     aliases: ["DNI"],
-    desc: "Comprar cosas del bot",
+    desc: "Realizar un doxeo basico",
     owner: false,
     premium: true,
     run: async (client, message, args, prefix) => {
