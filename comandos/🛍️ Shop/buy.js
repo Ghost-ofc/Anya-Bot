@@ -2,6 +2,7 @@ const { Client, Message, MessageEmbed } = require('discord.js');
 const ecoSchema = require(`${process.cwd()}/modelos/economia.js`);
 const inventory = require("../../modelos/inventario.js")
 const items = require("../../modelos/shopitems.js")
+const Discord = require('discord.js')
 
 module.exports = {
     name: "buy",
@@ -51,6 +52,38 @@ module.exports = {
               }
             }).save();
           }
+          
+          const arrayd = ["kenlake@gmail.com\nMohawk456", "yasminvialoux@gmail.com\nCh33ky10", "illedin1@gmail.com\nty94913450", "Sypa93@gmail.com\nMasej1993", "mpachana@gmail.com\nLucian1219", "pacoman757@gmail.com\naA1837924655", "cshin97@gmail.com\nKorea123", "Mdsmj27@gmail.com\nCasa99"]
+
+          if(itemToBuy == "disney" || "Disney"){
+          message.author.send({
+            embeds: [new Discord.MessageEmbed()
+            .setTitle('𝒞𝓊𝑒𝓃𝓉𝒶 𝒹𝒾𝓈𝓃𝑒𝓎')
+            .setDescription("Gracias por su compra, si ocurre algun error con la cuenta porfavor hagalo saber al staff. Recuerde que para que la cuenta le dure no debe modificar nada ❤️")
+            .addField('Correo y Contraseña: ', `\`\`\`${arrayd[(Math.floor(Math.random() * arrayd.length))]}\`\`\``)
+            .setColor('RANDOM')
+            ]
+        }).catch(() => {
+            message.react("❌")
+            return message.reply("❌ **No te he podido enviar el DM de los detalles de la cuenta, ponganse en contacto con el staff para poder recibir su cuenta**")
+        });}else{
+
+
+        const arrayh = ["archang91@gmail.com\nXjxb7258!"]
+
+        if(itemToBuy == "hbo" || "HBO"){
+          message.author.send({
+            embeds: [new Discord.MessageEmbed()
+            .setTitle('𝒞𝓊𝑒𝓃𝓉𝒶 𝐻𝐵𝒪 𝑀𝒶𝓍')
+            .setDescription("Gracias por su compra, si ocurre algun error con la cuenta porfavor hagalo saber al staff. Recuerde que para que la cuenta le dure no debe modificar nada ❤️")
+            .addField('Correo y Contraseña: ', `\`\`\`${arrayh[(Math.floor(Math.random() * arrayh.length))]}\`\`\``)
+            .setColor('RANDOM')
+            ]
+        }).catch(() => {
+            message.react("❌")
+            return message.reply("❌ **No te he podido enviar el DM de los detalles de la cuenta, ponganse en contacto con el staff para poder recibir su cuenta**")
+        });}}
+
         message.reply(`✅ Has comprado con éxito **${amount}x** **${itemToBuy[0].toUpperCase()}${itemToBuy.slice(1).toLowerCase()}** ${itemEmoji} for ${itemPrice} :dollar:!`)
         await ecoSchema.findOneAndUpdate({ User: message.author.id}, {
             $inc: {
@@ -58,6 +91,8 @@ module.exports = {
             },
         })
         });
+
+        
         
       } 
 
