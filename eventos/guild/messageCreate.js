@@ -1,6 +1,7 @@
 const config = require(`${process.cwd()}/config/config.json`)
 const serverSchema = require(`${process.cwd()}/modelos/servidor.js`)
 const { asegurar_todo } = require(`${process.cwd()}/handlers/funciones.js`)
+const { Client, Message, MessageEmbed } = require('discord.js');
 module.exports = async (client, message) => {
     if (!message.guild || !message.channel || message.author.bot) return;
     await asegurar_todo(message.guild.id, message.author.id);
@@ -30,7 +31,41 @@ module.exports = async (client, message) => {
             if(!message.member.permissions.has(command.permisos)) return message.reply(`❌ **No tienes suficientes permisos para ejecutar este comando!**\nNecesitas los siguientes permisos ${command.permisos.map(permiso => `\`${permiso}\``).join(", ")}`)
         }
 
-        
+        client.on('messageCreate', async (message) => {
+            if(!message.guild || message.author.bot) return;
+            
+            const db = require('../../modelos/db.js');
+            let userId = message.author.id;
+            let data = await db.findOne({ userId });
+            if(data && data.isAFK) {
+                await db.findOneAndUpdate({ userId }, {
+                    isAFK: false
+                });
+
+                const embed = new MessageEmbed()
+                .setAuthor({name: `AFK Removido para ${message.author.tag}`, iconURL: message.author.displayAvatarURL({dynamic: true})})
+                .setDescription(` **¡Heyy Volviste!** 
+                **¿Tuviste un buen descanso?** 
+               **He removido tu estado afk**`)
+               .setColor('RANDOM')
+
+                message.reply({ embeds: [embed] });
+            }
+            const target = message.mentions.members.first();
+            if(target) {
+                userId = target.id;
+                data = await db.findOne({ userId });
+                if(!data) return;
+
+                
+                const embed = new MessageEmbed()
+                .setAuthor({name: `El usuario ${target.user.tag} se encuentra actualmente en modo AFK`, iconURL: target.displayAvatarURL({dynamic: true})})
+                .setDescription(`Por favor hagan el favor de no mencionar a ${target.user.tag} hasta su regreso
+                **Razon:**\n\`\`\`${data.reason}\`\`\``)
+                //message.channel.send({ content: `**${target.nickname}** is currently AFK - ${data.reason} (<t:${Math.floor(parseInt(data.at) / 1000)}:R>)` });
+                message.reply({embeds: [embed], content: `Tiempo inactivo: (<t:${Math.floor(parseInt(data.at) / 1000)}:R>)` });
+            }
+        });    
 
         //ejecutar el comando
         command.run(client, message, args, data.prefijo, data.idioma);
