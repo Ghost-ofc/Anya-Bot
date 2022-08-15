@@ -3,7 +3,7 @@ const {substring} = require('discord.js');
 const Discord = require('discord.js');
 module.exports = {
     name: "help",
-    aliases: ["h", "ayuda", "bothelp"],
+    aliases: ["h", "ayuda", "bothelp", "comandos"],
     desc: "Sirve para ver la información del Bot",
     run: async (client, message, args, prefix) => {
         //definimos las categorias del bot leyendo la ruta ./comandos
@@ -40,11 +40,16 @@ module.exports = {
 
             //definimos el embed principal
             let ayuda_embed = new Discord.MessageEmbed()
-            .setTitle(`Ayuda de __${client.user.tag}__`)
-            .setColor(client.color)
-            .setDescription(`Bot Multifuncional en Desarollo por \`JuanD#4698\``)
-            .addField(`❓ **__¿Quién soy?__**`, `👋 Hola **${message.author.username}**, mi nombre es **__${client.user.username}__**\n🤯 Soy un BOT MULTIFUNCIONAL Incluyendo:\n> **ADMINISTRACIÓN\n> MODERACIÓN\n> MÚSICA**\n*y mucho más!*`)
-            .addField(`📈 **__ESTADÍSTICAS__**`, `⚙ **${client.commands.size} Comandos**\n📁 en **${client.guilds.cache.size} Servidores**\n📶 **\`${client.ws.ping}ms\` Ping**\n👤 Desarollado por **[JuanD#4698](https://discord.gg/MBPsvcphGf)**`)
+            .setAuthor({name: `Hola, soy ${client.user.tag}`, iconURL: client.user.displayAvatarURL({ dynamic: true })})
+            .setColor('RANDOM')
+            .setDescription(`Bienvenido al menu de ayuda de ${client.user.tag}, si encuentras un error recuerda que puedes reportarlo con el comando ${prefix}reportbug`)
+            .addField(`✨ Sobre Mi`, `Holis **${message.author.username}**, mi nombre es **__${client.user.username}__**\n Soy un BOT MULTIFUNCIONAL Incluyendo:\n> **ADMINISTRACIÓN\n> MODERACIÓN\n> MÚSICA**\n*y mucho más!*`)
+            .addField(`📈 𝙴𝚜𝚝𝚊𝚍í𝚜𝚝𝚒𝚌𝚊𝚜`)
+            .addFields(
+                {name: '**Comandos**', value: `\`${client.commands.size}\``, inline: true},
+                {name: '**Servidores**', value: `\`${client.guilds.cache.size}\``, inline: true},
+                {name: '**Ping**', value: `\`${client.ws.ping}ms\``, inline: true},
+            )
             .setThumbnail(message.guild.iconURL({ dynamic: true }))
             .setFooter({ text: `Página 1 / ${categorias.length+1}\n© desarollado por JuanD#4698 | 2022`, iconURL: `https://cdn.discordapp.com/avatars/727960956575154208/81e3c7ea8d0b6b67c2f3173620531e56.webp` })
             let embeds_pages = [ayuda_embed];
@@ -58,7 +63,7 @@ module.exports = {
                     .setColor(client.color)
                     .setThumbnail(message.guild.iconURL({ dynamic: true }))
                     .setDescription(comandos_de_categoria.length >= 1 ? `>>> *${comandos_de_categoria.map(comando => `\`${comando.replace(/.js/, "")}\``).join(" - ")}*` : `>>> *Todavía no hay comandos en esta categoría...*`)
-                    .setFooter({ text: `Página ${index+2} / ${categorias.length+1}\n© desarollado por JuanD#4698 | 2022`, iconURL: `https://images-ext-2.discordapp.net/external/G2O3wNQkWm957e5Qv3xUpceIQozUug5Z_dfyP9aIKYQ/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/282942681980862474/c2136834f15c6f8633c19c72feeb2427.webp` })
+                    .setFooter({ text: `Página ${index+2} / ${categorias.length+1}\n© desarollado por JuanD#4698 | 2022`, iconURL: `https://cdn.discordapp.com/avatars/727960956575154208/81e3c7ea8d0b6b67c2f3173620531e56.webp` })
                 embeds_pages.push(embed)
             })
 
