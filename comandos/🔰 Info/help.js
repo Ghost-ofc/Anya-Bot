@@ -44,7 +44,7 @@ module.exports = {
             .setColor('RANDOM')
             .setDescription(`Bienvenido al menu de ayuda de ${client.user.tag}, si encuentras un error recuerda que puedes reportarlo con el comando ${prefix}reportbug`)
             .addField(`✨ Sobre Mi`, `Holis **${message.author.username}**, mi nombre es **__${client.user.username}__**\n Soy un BOT MULTIFUNCIONAL Incluyendo:\n> **ADMINISTRACIÓN\n> MODERACIÓN\n> MÚSICA**\n*y mucho más!*`)
-            .addField(`📈 𝙴𝚜𝚝𝚊𝚍í𝚜𝚝𝚒𝚌𝚊𝚜`)
+            .addField(`📈 𝙴𝚜𝚝𝚊𝚍í𝚜𝚝𝚒𝚌𝚊𝚜`, `Estas son mis estadisticas actualmente`)
             .addFields(
                 {name: '**Comandos**', value: `\`${client.commands.size}\``, inline: true},
                 {name: '**Servidores**', value: `\`${client.guilds.cache.size}\``, inline: true},
