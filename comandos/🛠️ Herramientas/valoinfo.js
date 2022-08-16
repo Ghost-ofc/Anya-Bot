@@ -18,14 +18,6 @@ module.exports = {
         tag: `${tag}`
     })
 
-    const mmr = await VAPI.getMMR({
-        version: `v1`,
-        region: `${region}`,
-        name: `${valo}`,
-        tag: `${tag}`,
-        
-    })
-
     //let {mmr_change_to_last_game, currenttierpatched} = mmr.data.data[4]
 
     const embed = new MessageEmbed()
