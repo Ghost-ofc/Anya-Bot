@@ -6,7 +6,6 @@ module.exports = {
     name: "searchpinterest",
     aliases: ["search-pinterest", "pinterest"],
     desc: "Buscar informacion sobre un perfil de instagram",
-    permisos: ["ADMINISTRATOR"],
     owner: false,
     run: async(client, message, args, prefix) => {
 
