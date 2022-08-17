@@ -9,8 +9,8 @@ module.exports = {
     owner: false,
     run: async(client, message, args, prefix) => {
 
-        const foto1 = args[0]
-		if(!args[0]) return message.reply(" **Tienes que especificar un usuario** ")
+        const foto1 = args.join();
+		if(!foto1) return message.reply(" **Tienes que especificar un usuario** ")
 
         try {
 			let foto = `https://leyscoders-api.herokuapp.com/api/pinsearch?q=${foto1}&apikey=MIMINGANZ`;
