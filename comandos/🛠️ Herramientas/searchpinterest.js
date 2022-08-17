@@ -5,7 +5,7 @@ const Discord = require('discord.js')
 module.exports = {
     name: "searchpinterest",
     aliases: ["search-pinterest", "pinterest"],
-    desc: "Buscar informacion sobre un perfil de instagram",
+    desc: "Buscar informacion sobre una imagen de Pinterest",
     owner: false,
     run: async(client, message, args, prefix) => {
 
