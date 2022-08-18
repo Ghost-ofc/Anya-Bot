@@ -15,7 +15,7 @@ module.exports = {
         let voiceChannel = message.member.voice.channel;
 
         if (!string) return message.channel.send("Por favor escriba algo para hablar!");
-        //if (string.length > 200) return message.channel.send("¡Solo puedo hablar 200 palabras!");
+        if (string.length > 200) return message.channel.send("¡Solo puedo hablar 200 palabras!");
         if (!voiceChannel) return message.channel.send("¡Únase a un canal de voz para usar este comando!");
 
         let audioUrl = await getAudioUrl(string, {
