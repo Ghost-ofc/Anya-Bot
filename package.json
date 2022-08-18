@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-   "@bochilteam/scraper": "^3.0.0",
+      "@bochilteam/scraper": "^3.0.0",
     "@discordjs/opus": "^0.8.0",
     "@discordjs/rest": "^1.0.1",
+    "@discordjs/voice": "^0.11.0",
     "@distube/soundcloud": "^1.1.0",
     "@distube/spotify": "^1.2.1",
     "axios": "^0.27.2",
@@ -36,6 +37,7 @@
     "fortnitetracker-7days-stats": "^3.3.1",
     "fs": "^0.0.1-security",
     "glob": "^8.0.3",
+    "google-tts-api": "^2.0.2",
     "html-entities": "^2.3.3",
     "humanize-duration": "^3.27.2",
     "image-search-engine": "^1.2.1",
