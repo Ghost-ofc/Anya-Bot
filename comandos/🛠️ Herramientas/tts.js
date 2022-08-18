@@ -2,8 +2,9 @@ let { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatu
 let { Client, Message, MessageEmbed } = require("discord.js");
 let { getAudioUrl } = require("google-tts-api");
 module.exports = {
-    name: 'speak',
-    description: 'Speak in voice channel',
+    name: 'tts',
+    description: 'Habla en un canal de voz mediante texto',
+    aliases: ["speak", "TTS"],
     /**
      * @param { Client } client 
      * @param { Message } message 
