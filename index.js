@@ -16,8 +16,9 @@ const client = new Discord.Client({
 client.on("ready", () => {
   console.log(`Todo  está activo!`)
   const Estado = [
-    `Ayudando a mejorar tu server uwu`,
-    `Jamyuu!`,
+    `Ayuden a programar una base de datos`,
+    `me quiero matar!`,
+    `que sentido tiene la vida?`,
   ];
 
  setInterval(() => {
