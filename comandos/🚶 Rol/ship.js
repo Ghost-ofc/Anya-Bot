@@ -2,46 +2,69 @@ const discord = require("discord.js");
 const Canvas = require("canvas");
 
 
-module.exports.execute = async (client, message) => {
-    const canvas = Canvas.createCanvas(700, 250);
-    const ctx = canvas.getContext('2d');
+module.exports.run = async (client, message, args,) => {
 
-    const target = message.mentions.members.first();
-    if (target.id == message.author.id) return message.reply({ content: ':error: Please mention someone else and not yourself lol.' });
+    const canvas = Canvas.createCanvas(700, 250)
+    const ctx = canvas.getContext('2d')
 
-    const bg = await Canvas.loadImage('https://cdn.discordapp.com/attachments/716216765448978504/858442843197669376/PElrfiWeuvQ.png');
-    ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+    let target = message.mentions.users.first()
+    let mentiontwo = message.mentions.users.last()
 
-    const avatar = await Canvas.loadImage(message.member.user.displayAvatarURL({ format: 'png' }));
-    ctx.drawImage(avatar, 100, 25, 200, 200);
+    
 
-    const TargetAvatar = await Canvas.loadImage(target.displayAvatarURL({ format: 'png' }));
-    ctx.drawImage(TargetAvatar, 400, 25, 200, 200);
+    //const siu = name + name2
+    if(!target) return message.channel.send("Porfavor menciona a alguien :3")
+/*    if(!mentiontwo) return message.channel.send("Tienes que mencionar a otra persona!!")*/
+    if (mentiontwo.id == target.id) return message.channel.send("No menciones a la misma persona!!")
 
+    const bg = await Canvas.loadImage('https://i.pinimg.com/736x/5c/57/a8/5c57a8967bbd906f6a047e4c01adcc2a.jpg')
 
-    const heart = await Canvas.loadImage('https://cdn.discordapp.com/attachments/716216765448978504/858607217728159744/unknown.png');
-    const broken = await Canvas.loadImage('https://cdn.discordapp.com/attachments/716216765448978504/858607537238179840/unknown.png');
-    const random = Math.floor(Math.random() * 99) + 1;
+    const random = Math.floor(Math.random() * 99) + 1
 
-    if (random >= 50) {
-        ctx.drawImage(heart, 275, 60, 150, 150);
-        const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'love.png');
-        const embed = new discord.MessageEmbed()
-            .setDescription(`${message.member.username} shipped with ${target.user.username} and it is ${random}%`)
-            .setImage('attachment://love.png')
-            .setColor('GREEN');
-        return message.reply({ embeds: [embed], files: [attachment] });
-
+    let emoji
+    let color
+    if(random >= 50) {
+    emoji = "https://cdn.discordapp.com/attachments/716216765448978504/858607217728159744/unknown.png"
+    color = "GREEN"
+    } else if(random < 50) {
+    emoji = "https://cdn.discordapp.com/attachments/716216765448978504/858607537238179840/unknown.png"
+    color = "RED"
     }
-    else {
-        ctx.drawImage(broken, 275, 60, 150, 150);
-        const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'broken.png');
-        const embed = new discord.MessageEmbed()
-            .setDescription(`${message.author.username} shipped with ${target.user.username} and it is ${random}%`)
-            .setImage('attachment://broken.png')
-            .setColor('RED');
-        return message.reply({ embeds: [embed], files: [attachment] });
 
-    }
+    ctx.drawImage(bg, -10, -10, canvas.width, canvas.height)
+
+    const fumo = await Canvas.loadImage(emoji)
+    ctx.drawImage(fumo, 275, 60, 150, 150)
+
+    ctx.beginPath()
+    ctx.arc(400 / 2, 250 / 2, 195 / 2, 0, Math.PI * 2)
+    ctx.arc(1000 / 2, 250 / 2, 195 / 2, 0, Math.PI * 2)
+    ctx.closePath()
+    ctx.clip()
+
+    const avatar = await Canvas.loadImage(target.displayAvatarURL({ format: 'png' }))
+    ctx.drawImage(avatar, 100, 25, 200, 200)
+
+    const TargetAvatar = await Canvas.loadImage(mentiontwo.displayAvatarURL({ format: 'png' }))
+    ctx.drawImage(TargetAvatar, 400, 25, 200, 200)
+
+    /*if(target.lenght > 0){
+        console.log(`Si ${target.tag}`)
+    }else{
+        console.log(`Si ${target.tag}: `+target.tag)
+        console.log(`No ${target.tag.slice(0,3)}`)
+    }*/
+
+    
+    const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'fumo.png')
+    const embed = new discord.MessageEmbed()
+        .setDescription(
+            `${target.tag} shipped con ${mentiontwo.tag} y es ${random}% compatible
+            Nombre del ship: ***${target.tag.slice(0,3)}${mentiontwo.tag.slice(2, -5)}***`)
+        .setImage('attachment://fumo.png')
+        .setColor(color)
+    return message.channel.send({ embeds: [embed], files: [attachment] })
+
+    
 };
-module.exports.name = 'ships';
+module.exports.name = 'ship';
