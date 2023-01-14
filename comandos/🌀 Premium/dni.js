@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["DNI"],
     desc: "Realizar un doxeo basico",
     owner: false,
-    premium: false,
+    //premium: false,
     run: async (client, message, args, prefix) => {
 
         const DNI = args[0]
