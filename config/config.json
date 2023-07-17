@@ -1,7 +1,7 @@
 {
-    "token": "ODI2NDY5MzA1NzU5Njk0ODQ4.Gzuiaj.b6KqsFOKeROtppiZAFhFFDWUVfCdw8bHGlv3t0",
+    "token": "PONER TOKEN ACA",
     "prefix": ">",
-    "mongodb": "mongodb+srv://ghostofc:Ghostofc@cluster0.elrhsyy.mongodb.net/?retryWrites=true&w=majority",
-    "ownerIDS": ["727960956575154208"]
+    "mongodb": "URL DE MONGODB",
+    "ownerIDS": ["ID DEL OWNER"]
 }
 
